@@ -1,0 +1,124 @@
+:root {
+    --secondary-light: #3EB871;
+    --secondary-dark: #478F65;
+    --primary-light: #27E375;
+    --primary-dark: #436350;
+    --primary-darkest: #2F3833;
+    --secondary-darkest: #0C381E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(-90deg,var(--primary-light), var(--primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-table {
+    color: var(--secondary-darkest);
+    height: 70vh;
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 50px;
+}
+
+.player1 {
+    border-radius: 50px 0 0 50px;
+}
+
+.player2 {
+    border-radius: 0 50px 50px 0;
+}
+
+.game-table .player-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(220, 220, 220, 0.6);
+    flex-grow: 1;
+}
+
+.game-table .player-section.focused {
+    background-color: rgba(255, 255, 255, 0.75); 
+}
+
+.game-table .player-section .total-score {
+    height: 30%;
+    font-size: 80px;
+    color: var(--secondary-dark)
+}
+
+.game-table .player-section .current-score-section {
+    background-color: var(--secondary-dark);
+    opacity: 0.8;
+    padding: 20px 40px;
+    border-radius: 20px;
+    color: whitesmoke;
+    animation-name: rotation;
+    animation-duration: 1s;
+}
+
+.game-table .player-section .current-score-section .current-score {
+    margin-top: 10px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.game-table .buttons-area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game-table .buttons-area button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: grey;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: transform 0.2s;
+}
+
+.game-table .buttons-area button:focus {
+    outline: none;
+}
+
+.game-table .buttons-area button:hover {
+    transform: translateY(-3px);
+}
+
+
+.game-table .buttons-area .dice {
+    width: 8vw;
+    animation-name: rotation;
+    animation-duration: 1s;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(10deg) translateY(20px) translate(10px);
+    }
+    to {
+        transform: rotate(0deg) translateY(0px) translate(0px);
+    }
+}
+
