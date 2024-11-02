@@ -1,10 +1,10 @@
-# Dice Roller
+# :game_die: Dice Roller
 
-## How to Download
+## :arrow_down: How to Download
 
 _Dice Roller_ doesn't require a download but a simple clonation. Clone this repository locally on your machine and open the `index.html` file in your preferred browser.
 
-## how to Play
+## :page_with_curl: how to Play
 
 The game is pretty easy! Two players aim to reach the highest score. How? Rolling dices.
 
